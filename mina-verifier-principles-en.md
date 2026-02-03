@@ -66,10 +66,10 @@ epoch N+2 (distributes rewards from epoch N+1)
 
 ## 3. Two Kinds of Finality
 
-### Cryptographic finality
+### Cryptographically Validity
 - Provided by **SNARK proofs**.  
 - If the candidate tip’s SNARK proof verifies, the tip state is cryptographically valid and its ancestors are included via recursion.
-- In this repo, this is done by `verify_block(...)`, with Pickles recursion.
+- In the Mina State Verifier within alignedlayer, this is done by `verify_block(...)`, with Pickles recursion.
 - Note: the SNARK circuit mainly covers **block validity** (e.g., protocol-state and VRF/slot-related constraints). **Fork-choice rules** (short/long-range, density) are *not* in the circuit; they are applied at the node/verifier level.
 
 ### Economic finality
