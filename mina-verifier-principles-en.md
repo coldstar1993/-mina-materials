@@ -1,6 +1,6 @@
 # Mina Verifier Principles
 
-This document explains how the Mina verifier in this repo decides whether to accept a **candidate chain** on-chain. It focuses on the roles of slot, epoch, epoch lock_checkpoint, economic/cryptographic finality, short-range/long-range forks, consensus rules, and density. The bridge context matters here: **we only verify whether a candidate tip is more secure than the currently bridged tip**.
+This document explains how the Mina verifier in this repo decides whether to accept a **candidate chain** on-chain. It focuses on the roles of slot, epoch, epoch lock_checkpoint, economic/cryptographic finality, short-range/long-range forks, consensus rules, and density. The bridge context matters here: **we only verify whether a candidate tip is more secure than the currently bridged tip (stored on MinaStateSettlementContract)**.
 
 ---
 
