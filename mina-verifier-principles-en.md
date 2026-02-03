@@ -64,9 +64,9 @@ epoch N+2 (distributes rewards from epoch N+1)
 
 ---
 
-## 3. Two Kinds of Finality
+## 3. Block Validity & Economic finality
 
-### Cryptographically Validity
+### Block Validity
 - Provided by **SNARK proofs**.  
 - If the candidate tip’s SNARK proof verifies, the tip state is cryptographically valid and its ancestors are included via recursion.
 - In the Mina State Verifier within alignedlayer, this is done by `verify_block(...)`, with Pickles recursion.
@@ -76,10 +76,6 @@ epoch N+2 (distributes rewards from epoch N+1)
 - Provided by **consensus rules**.  
 - A block can be cryptographically valid but still not the *most secure* chain (e.g., a parallel fork).
 - So we need consensus rules to decide which chain is harder to reorganize.
-
-> Simple intuition:  
-> **Cryptographic finality = “this state is correct.”  
-> Economic finality = “this state is safer and harder to overturn.”**
 
 ---
 
