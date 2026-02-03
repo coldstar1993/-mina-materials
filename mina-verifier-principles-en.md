@@ -118,6 +118,8 @@ Honest nodes then decide:
 
 This keeps honest nodes from being fooled by a sparse chain created after an early fork.
 
+TIPS: In reality, Mina nodes mark `lock_checkpoint` as a checkpoint (Just like checkpoint in other POS chains), which means honest nodes **DIRECTLY reject** the fork chain whose fork point happens **before** the epoch’s `lock_checkpoint`.
+
 ---
 
 ## 5. What Is Density?
