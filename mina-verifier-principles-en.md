@@ -64,7 +64,7 @@ epoch N+2 (distributes rewards from epoch N+1)
 
 ---
 
-## 3. Block Validity & Economic finality
+## 3. Block Validity & Economic finality & Finality Confidence
 
 ### Block Validity
 - Provided by **SNARK proofs**.  
@@ -76,6 +76,15 @@ epoch N+2 (distributes rewards from epoch N+1)
 - Provided by **consensus rules**.  
 - A block can be cryptographically valid but still not the *most secure* chain (e.g., a parallel fork).
 - So we need consensus rules to decide which chain is harder to reorganize.
+
+### Finality Confidence
+With each subsequent block, a recipient has a higher degree of confidence that the payment is actually complete and that the network has consensus about that block. However, like in most blockchains, payments are said to be confirmed after a certain number of blocks, also known as transaction finality.
+
+In the Bitcoin network, a transaction is confirmed after 6 blocks (60 mins) with an assumption that an attacker is unlikely to amass more than 10% of the hashrate.
+
+With a slot duration of 3 mins and assuming 90% honest stake, here is a table (in following link) shows the finality in blocks, the average time it takes to produce the corresponding number of blocks, and the confidence that payment will be confirmed.
+
+FYI: https://docs.minaprotocol.com/mina-protocol/lifecycle-of-a-payment#step-5-to-achieve-a-payment-confidence-level-alice-is-confident-the-transfer-is-complete
 
 ---
 
